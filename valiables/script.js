@@ -8,7 +8,7 @@ let firstName = " Jason"
 
 console.log(message,num1 + num2);
 
-document.write("The result of the sum is:" + " the calculation was made by" + firstName);
+document.write("The result of the sum is" + " the calculation was made by" + firstName);
 
 message="Welcome to coding";
 
@@ -34,7 +34,7 @@ document.write(
 let Name="Jason Ramirez";
 let Email="Jason@gmail.com";
 let salaryYearly= 300000;
-
+//to display on the console is console.log to display the work//
 
 document.write(
     `

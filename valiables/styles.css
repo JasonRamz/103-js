@@ -1,0 +1,24 @@
+body {
+    font-family: Arial;
+    margin: 1rem;
+    padding: 1rem;
+}
+h1,h2{
+    margin: 1rem;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 2rem;
+}
+
+th, td {
+    padding: .9rem 1rem;
+    text-align: center;
+}
+
+thead {
+    background-color: #74e9e1;
+}
