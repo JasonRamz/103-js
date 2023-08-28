@@ -1,4 +1,4 @@
-const products = [
+var products = [
     { name: "Smartphones", category: "electronics", price: "$350" },
     { name: "Laptop", category: "electronics", price: "$600" },
     { name: "Headphones", category: "electronics", price: "$55" },
@@ -14,23 +14,24 @@ const products = [
     { name: "Shorts", category: "clothing", price: "$5" }
 ];
 
-const tbody = document.getElementById("productTableBody");
+var tbody = document.getElementById("productTableBody");
 
 products.forEach(products=>{
-    const row = document.createElement("tr");
+    var row = document.createElement("tr");
     
-    const nameCell= document.createElement("td");
+    var nameCell= document.createElement("td");
     nameCell.textContent = products.name;
     row.appendChild(nameCell);
 
-    const categoryCell = document.createElement("td");
+    var categoryCell = document.createElement("td");
     categoryCell.textContent = products.category;
     row.appendChild(categoryCell);
 
-    const priceCell = document.createElement("td");
+    var priceCell = document.createElement("td");
     priceCell.textContent= products.price;
     row.appendChild(priceCell);
 
     tbody.appendChild(row);
 
+    console.log("Created Row:  ${product.name} - ${product.category} - ${price}");
 });
