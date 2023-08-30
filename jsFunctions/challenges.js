@@ -5,27 +5,33 @@
 //}
 //sum(3,5);//8
 
-//calculate the gpa of an student enrolled in course 101 and 102
-// display grade 1 and 2 and gpa as well as student name.
+//we add the calculation of the prices code
+function addItem() {
+    let itemName = prompt("Enter item Name:");
+    let Price = Number(prompt("Enter the price:"));
+    let Tax = Number(prompt("Enter the tax:"));
 
-
-function calculateGPA(){
-    //getting the values
-    let studentName = prompt("Enter Student Name:");
-    let grade1 = Number(prompt("Enter FSDI 101 grade:"));
-    let grade2 = Number(prompt("Enter FSDI 102 grade:"));
-    //calculating
-    let gpa = (grade1+grade2)/2;
-    //displaying
-    document.getElementById("studentList").innerHTML+=`
-        <div>
-            <p>Name: ${studentName}</p>
-            <p> FSDI 101: ${grade1}</p>
-            <p> FSDI 102: ${grade2}</p>
-            <p>GPA: ${gpa}</p>
-        </div>
-        `;
+    total += calculatePrice(itemName, Price, Tax);
+    console.log(total);
 }
 
-calculateGPA("Jason",90,85)
+function calculatePrice(itemName, Price, Tax){
+    //calculate to get full price
+    let fullPrice = Price + Tax;
+    
+    //displayer
+    let itemDiv = document.createElement("div");
+    itemDiv.innerHTML = `
+        <div>
+            <p>Name: ${itemName}</p>
+            <p>Price: ${Price}</p>
+            <p>Tax amount: ${Tax}</p>
+            <p>Full Price: ${fullPrice}</p>
+        </div>
+    `;
+    document.getElementById("itemPrice").appendChild(itemDiv);
 
+    return fullPrice; //return the calculated full price
+}
+
+let total = 0; // Initialize total
