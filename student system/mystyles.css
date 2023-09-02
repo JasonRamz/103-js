@@ -1,0 +1,70 @@
+/*global*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: arial;
+    background-color: rgb(67, 104, 71)
+}
+h1,h2{
+    text-align: center;
+}
+
+/*utilities*/
+.container{
+    width: 60%;
+    margin: 1rem auto;
+}
+.box-shadow{
+    box-shadow: 10px 5px 5px rgb(15, 157, 36);
+    border-radius: 1rem 3rem;
+    margin: 1rem;
+    background-color: white;
+    padding: 0.5rem;
+}
+.btn{
+    border-color: white;
+    border: 2px solid rgb(15, 157, 36);
+    color: rgb(29, 76, 36);
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(29, 77, 36);
+    color: white;
+}
+/*header*/
+h1{
+    color: white;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    text-shadow:10px 5px 5px rgb(9, 63, 17) ;
+}
+header{
+    height: 25vh;
+}
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 8rem;
+}
+.register input{
+    width: 70%;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+/*main*/
+main{
+    background-image: url(https://img.freepik.com/free-photo/green-dirty-blackboard_125540-774.jpg?w=1380&t=st=1693671678~exp=1693672278~hmac=91f46b941ea520513a7d30138320b3e98a6d3fe4e02176a5e75198f2d67f6e72);
+    height: 75vh;
+    background-size: cover;
+    background-position: top right;
+}
