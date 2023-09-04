@@ -1,0 +1,51 @@
+/*global*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: arial;
+    background-color: #FFCCCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 50vh;
+}
+h1{
+    font-size: 24px;
+    
+}
+/*container*/
+.container{
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 35px;
+    text-align: center;
+}
+.taskInput {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.addTaskBtn {
+    background-color: #4CAF50;
+    box-shadow: #115113;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    cursor: pointer;
+}
+
+.taskList {
+    text-align: left;
+    margin-top: 20px;
+}
+/*main*/
+main{
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fotor.com%2Fimages%2Fpink-background%2F&psig=AOvVaw1LEx29-EtIXiEju5tqk7xt&ust=1693892544083000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCLinz8yfkIEDFQAAAAAdAAAAABAF);
+    height: 75vh;
+    background-size: cover;
+    background-position: top right;
+}
