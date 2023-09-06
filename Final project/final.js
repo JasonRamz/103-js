@@ -1,41 +1,38 @@
-// Array to store tasks
-const tasks = [];
+let tasks = [];
 
-// Function to add a task
-function addTask() {
-    const taskInput = document.getElementById("taskInput");
-    const taskList = document.getElementById("taskList");
-    const taskCount = document.getElementById("taskCount");
+function register() {
+    let task = document.getElementById("txtTask").value;
 
-    const taskText = taskInput.value.trim();
-    if (taskText === "") {
-        alert("Please Enter A Task!");
-        return;
+    if (task === "") {
+        alert("Please add a task");
+    } else {
+        tasks.push({ task: task, completed: false });
+        document.getElementById("txtTask").value = "";
+        display();
     }
-
-    // Add the task to the array
-    tasks.push(taskText);
-
-    // Update the task list and count
-    taskList.innerHTML = "";
-    tasks.forEach((task, index) => {
-        const listItem = document.createElement("div");
-        listItem.innerText = `${index + 1}. ${task}`;
-        taskList.appendChild(listItem);
-    });
-
-    taskCount.innerText = tasks.length;
-
-    // Clear the input field
-    taskInput.value = "";
 }
-const addTaskBtn = document.getElementById('addTaskBtn');
-addTaskBtn.addEventListener('click', addTask);
 
-// Add enter key event listener for convenience
-const taskInput = document.getElementById('taskInput');
-taskInput.addEventListener('keyup', (event) => {
-    if (event.key === 'Enter') {
-        addTask();
+function display() {
+    let taskList = document.getElementById("taskList");
+    taskList.innerHTML = "";
+
+    for (let i = 0; i < tasks.length; i++) {
+        let taskItem = document.createElement("div");
+        taskItem.classList.add("task-item");
+
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = tasks[i].completed;
+        checkbox.addEventListener("change", function () {
+            tasks[i].completed = checkbox.checked;
+        });
+
+        let label = document.createElement("label");
+        label.textContent = tasks[i].task;
+
+        taskItem.appendChild(checkbox);
+        taskItem.appendChild(label);
+        taskList.appendChild(taskItem);
     }
-});
+};
+

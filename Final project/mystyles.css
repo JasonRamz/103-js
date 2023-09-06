@@ -15,14 +15,15 @@ h1{
     font-size: 24px;
     
 }
-/*container*/
-.container{
+/* Container */
+.container {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 35px;
     text-align: center;
 }
+
 .taskInput {
     width: 100%;
     padding: 10px;
@@ -42,9 +43,20 @@ h1{
     text-align: left;
     margin-top: 20px;
 }
-/*main*/
-main{
-    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.fotor.com%2Fimages%2Fpink-background%2F&psig=AOvVaw1LEx29-EtIXiEju5tqk7xt&ust=1693892544083000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCLinz8yfkIEDFQAAAAAdAAAAABAF);
+
+/* Task List */
+.task-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.task-item label {
+    margin-left: 10px;
+}
+
+/* Main */
+main {
     height: 75vh;
     background-size: cover;
     background-position: top right;
